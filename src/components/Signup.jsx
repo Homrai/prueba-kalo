@@ -17,7 +17,7 @@ const Signup = () => {
 
   const enviarDatos= async ()=>{
     if (registro.email==="" || registro.password==="" || registro.repassword==="") return toast.error("Porfavor rellene todos los campos");
-    //setLoading(true);
+    setLoading(true);
     if (registro.password!==registro.repassword) {
       setLoading(false);
       return toast.error("el password debe coincidir, porfavor verifique");
